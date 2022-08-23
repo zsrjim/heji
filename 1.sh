@@ -35,7 +35,14 @@ Acme (){
 superspeed(){
 	bash <(curl -Lso- https://git.io/superspeed.sh)
 }
-
+#6一键安装docker
+superspeed(){
+	curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+}
+#7一键安装docker
+superspeed(){
+	curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+}
 echo && echo -e " 
   
 +-------------------------------------------------------------+
@@ -48,9 +55,11 @@ echo && echo -e "
  ${Green_font_prefix}3.${Font_color_suffix}  安装XUI
  ${Green_font_prefix}4.${Font_color_suffix}  安装Acme
  ${Green_font_prefix}5.${Font_color_suffix}  VPS测速
+ ${Green_font_prefix}6.${Font_color_suffix}  安装docker
+ ${Green_font_prefix}7.${Font_color_suffix}  安装docker
  " && echo
 echo
-read -e -p " 请输入数字 [0-5]:" num
+read -e -p " 请输入数字 [0-7]:" num
 case "$num" in
 	0)
 	update
@@ -69,8 +78,14 @@ case "$num" in
 	;;
 	5)
 	superspeed 
+	;;
+	6)
+	Acme 
+	;;
+	7)
+	superspeed 
 	;;	
 	*)
-	echo "请输入正确数字 [0-5]"
+	echo "请输入正确数字 [0-7]"
 	;;
  esac
