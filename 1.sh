@@ -31,6 +31,10 @@ Acme (){
 	#安装证书到指定文件夹
 	~/.acme.sh/acme.sh --installcert -d $1 --key-file /root/private.key --fullchain-file /root/cert.crt
 }
+#5一键测速
+superspeed(){
+	bash <(curl -Lso- https://git.io/superspeed.sh)
+}
 
 echo && echo -e " 
   
@@ -43,9 +47,10 @@ echo && echo -e "
  ${Green_font_prefix}2.${Font_color_suffix}  流媒体测试
  ${Green_font_prefix}3.${Font_color_suffix}  安装XUI
  ${Green_font_prefix}4.${Font_color_suffix}  安装Acme
+ ${Green_font_prefix}5.${Font_color_suffix}  VPS测速
  " && echo
 echo
-read -e -p " 请输入数字 [0-4]:" num
+read -e -p " 请输入数字 [0-5]:" num
 case "$num" in
 	0)
 	update
@@ -61,8 +66,11 @@ case "$num" in
 	;;
 	4)
 	Acme 
+	;;
+	5)
+	superspeed 
 	;;	
 	*)
-	echo "请输入正确数字 [0-4]"
+	echo "请输入正确数字 [0-5]"
 	;;
  esac
