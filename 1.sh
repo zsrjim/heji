@@ -22,14 +22,14 @@ xui(){
 #4一键安装Acme
 Acme (){
 	curl https://get.acme.sh | sh
-	read -e -p "请输入邮箱："$1
+	read -e -p "请输入邮箱：" str
 	#80 端口空闲的证书申请方式
-	~/.acme.sh/acme.sh --register-account -m 你的邮箱 --server letsencrypt
-	read -e -p "请输入域名："$1
-	~/.acme.sh/acme.sh  --issue -d $1 --server letsencrypt   --standalone
+	~/.acme.sh/acme.sh --register-account -m $str --server letsencrypt
+	read -e -p "请输入域名：" str
+	~/.acme.sh/acme.sh  --issue -d $str --server letsencrypt   --standalone
 
 	#安装证书到指定文件夹
-	~/.acme.sh/acme.sh --installcert -d $1 --key-file /root/private.key --fullchain-file /root/cert.crt
+	~/.acme.sh/acme.sh --installcert -d $str --key-file /root/private.key --fullchain-file /root/cert.crt
 }
 #5一键测速
 superspeed(){
