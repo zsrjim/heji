@@ -41,7 +41,7 @@ docker(){
 }
 #7一键安装docker-compose
 docker-compose(){
-	curl -L "https://github.com/docker/compose/releases/download/v2.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && docker-compose --version
+	curl -L "https://github.com/docker/compose/releases/download/v2.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 }
 echo && echo -e " 
   
