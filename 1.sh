@@ -36,12 +36,12 @@ superspeed(){
 	bash <(curl -Lso- https://git.io/superspeed.sh)
 }
 #6一键安装docker
-superspeed(){
+docker(){
 	curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 }
-#7一键安装docker
-superspeed(){
-	curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+#7一键安装docker-compose
+docker-compose(){
+	curl -L "https://github.com/docker/compose/releases/download/v2.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 }
 echo && echo -e " 
   
@@ -56,7 +56,7 @@ echo && echo -e "
  ${Green_font_prefix}4.${Font_color_suffix}  安装Acme
  ${Green_font_prefix}5.${Font_color_suffix}  VPS测速
  ${Green_font_prefix}6.${Font_color_suffix}  安装docker
- ${Green_font_prefix}7.${Font_color_suffix}  安装docker
+ ${Green_font_prefix}7.${Font_color_suffix}  安装docker-compose
  " && echo
 echo
 read -e -p " 请输入数字 [0-7]:" num
@@ -80,10 +80,10 @@ case "$num" in
 	superspeed 
 	;;
 	6)
-	Acme 
+	docker 
 	;;
 	7)
-	superspeed 
+	docker-compose 
 	;;	
 	*)
 	echo "请输入正确数字 [0-7]"
