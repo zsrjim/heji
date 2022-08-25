@@ -33,7 +33,7 @@ Acme (){
 }
 #5一键测速
 superspeed(){
-	bash <(curl -Lso- https://git.io/superspeed.sh)
+	bash <(curl -Lso- https://git.io/superspeed_uxh)
 }
 #6一键安装docker
 docker(){
