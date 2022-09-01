@@ -5,7 +5,7 @@ export PATH
 
  #0一键更新系统
 update(){
-	apt update -y && apt-get upgrade -y && apt-get install wget sudo curl socat -y
+	apt-get update -y && apt-get upgrade -y && apt-get install wget sudo curl socat -y
 }
  #1一键DD debian11
 debian(){
