@@ -61,7 +61,7 @@ echo && echo -e "
  ${Green_font_prefix}5.${Font_color_suffix}  VPS测速
  ${Green_font_prefix}6.${Font_color_suffix}  安装docker
  ${Green_font_prefix}7.${Font_color_suffix}  安装docker-compose
- ${Green_font_prefix}7.${Font_color_suffix}  安装Tg专用代理（Go版）
+ ${Green_font_prefix}8.${Font_color_suffix}  安装Tg专用代理（Go版）
  " && echo
 echo
 read -e -p " 请输入数字 [0-8]:" num
