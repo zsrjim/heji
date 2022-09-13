@@ -43,6 +43,10 @@ docker(){
 docker-compose(){
 	curl -L "https://github.com/docker/compose/releases/download/v2.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose && ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 }
+#8安装Tg专用代理（Go版）
+Tg_socks(){
+	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy_go.sh)
+}
 echo && echo -e " 
   
 +-------------------------------------------------------------+
@@ -57,9 +61,10 @@ echo && echo -e "
  ${Green_font_prefix}5.${Font_color_suffix}  VPS测速
  ${Green_font_prefix}6.${Font_color_suffix}  安装docker
  ${Green_font_prefix}7.${Font_color_suffix}  安装docker-compose
+ ${Green_font_prefix}7.${Font_color_suffix}  安装Tg专用代理（Go版）
  " && echo
 echo
-read -e -p " 请输入数字 [0-7]:" num
+read -e -p " 请输入数字 [0-8]:" num
 case "$num" in
 	0)
 	update
@@ -84,8 +89,10 @@ case "$num" in
 	;;
 	7)
 	docker-compose 
+	;;
+	mtproxy 
 	;;	
 	*)
-	echo "请输入正确数字 [0-7]"
+	echo "请输入正确数字 [0-8]"
 	;;
  esac
