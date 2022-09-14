@@ -90,6 +90,7 @@ case "$num" in
 	7)
 	docker-compose 
 	;;
+	8)
 	mtproxy 
 	;;	
 	*)
