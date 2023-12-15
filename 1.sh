@@ -46,6 +46,9 @@ docker-compose(){
 #8安装Tg专用代理（Go版）
 mtproxy(){
 	bash <(curl -s -L https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy_go.sh)
+ #9安装sing-box全家桶
+sing-box(){
+	bash <(wget -qO- https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh)
 }
 echo && echo -e " 
   
@@ -62,9 +65,10 @@ echo && echo -e "
  ${Green_font_prefix}6.${Font_color_suffix}  安装docker
  ${Green_font_prefix}7.${Font_color_suffix}  安装docker-compose
  ${Green_font_prefix}8.${Font_color_suffix}  安装Tg专用代理（Go版）
+ ${Green_font_prefix}9.${Font_color_suffix}  安装sing-box
  " && echo
 echo
-read -e -p " 请输入数字 [0-8]:" num
+read -e -p " 请输入数字 [0-9]:" num
 case "$num" in
 	0)
 	update
@@ -92,8 +96,11 @@ case "$num" in
 	;;
 	8)
 	mtproxy 
-	;;	
+	;;
+ 	9)
+	sing-box 
+	;;
 	*)
-	echo "请输入正确数字 [0-8]"
+	echo "请输入正确数字 [0-9]"
 	;;
  esac
