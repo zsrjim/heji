@@ -9,7 +9,7 @@ update(){
 }
  #1一键DD debian11
 debian(){
-	curl -fLO https://js.danshui.tk/proxy/https://raw.githubusercontent.com/bohanyang/debi/master/debi.sh && chmod a+rx debi.sh && ./debi.sh --install 'curl wget neofetch htop net-tools git' --hostname liu --bbr --timezone Asia/Shanghai --cloud-kernel --user root --password xxxxxx && shutdown -r now
+	curl -fLO https://js.danshui.tk/proxy/https://raw.githubusercontent.com/bohanyang/debi/master/debi.sh && chmod a+rx debi.sh && ./debi.sh --install 'curl wget neofetch htop net-tools git' --hostname liu --bbr --ustc --timezone Asia/Shanghai --cloud-kernel --user root --password xxxxxx && shutdown -r now
 }
 #2流媒体测试
 check(){
