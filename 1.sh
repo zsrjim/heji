@@ -71,7 +71,7 @@ echo && echo -e "
  ${Green_font_prefix}7.${Font_color_suffix}  安装docker-compose
  ${Green_font_prefix}8.${Font_color_suffix}  安装Tg专用代理（Go版）
  ${Green_font_prefix}9.${Font_color_suffix}  安装sing-box
- ${Green_font_prefix}10.${Font_color_suffix}  更改swap分区
+ ${Green_font_prefix}10.${Font_color_suffix} 更改swap分区
  " && echo
 echo
 read -e -p " 请输入数字 [0-10]:" num
