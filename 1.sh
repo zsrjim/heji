@@ -53,7 +53,7 @@ sing-box(){
 }
 #10一键添加虚拟交换分区（别乱用）
 swap(){
-	bash -c  "$(curl -fsSL https://js.danshui.tk/proxy/https://raw.githubusercontent.com/shidahuilang/pve/main/swap.sh)")
+	bash -c  "$(curl -fsSL https://js.danshui.tk/proxy/https://raw.githubusercontent.com/shidahuilang/pve/main/swap.sh)"
 }
 echo && echo -e " 
   
@@ -107,7 +107,7 @@ case "$num" in
 	sing-box 
 	;;
   	10)
-	sing-box 
+	swap 
 	;;
 	*)
 	echo "请输入正确数字 [0-10]"
