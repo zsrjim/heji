@@ -51,6 +51,10 @@ mtproxy(){
 sing-box(){
 	bash <(wget -qO- https://js.danshui.tk/proxy/https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh)
 }
+#10一键添加虚拟交换分区（别乱用）
+swap(){
+	bash -c  "$(curl -fsSL https://js.danshui.tk/proxy/https://raw.githubusercontent.com/shidahuilang/pve/main/swap.sh)")
+}
 echo && echo -e " 
   
 +-------------------------------------------------------------+
@@ -67,9 +71,10 @@ echo && echo -e "
  ${Green_font_prefix}7.${Font_color_suffix}  安装docker-compose
  ${Green_font_prefix}8.${Font_color_suffix}  安装Tg专用代理（Go版）
  ${Green_font_prefix}9.${Font_color_suffix}  安装sing-box
+ ${Green_font_prefix}10.${Font_color_suffix}  更改swap分区
  " && echo
 echo
-read -e -p " 请输入数字 [0-9]:" num
+read -e -p " 请输入数字 [0-10]:" num
 case "$num" in
 	0)
 	update
@@ -101,7 +106,10 @@ case "$num" in
  	9)
 	sing-box 
 	;;
+  	10)
+	sing-box 
+	;;
 	*)
-	echo "请输入正确数字 [0-9]"
+	echo "请输入正确数字 [0-10]"
 	;;
 esac
