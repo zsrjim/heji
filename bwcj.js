@@ -11,8 +11,8 @@ Loon:
 2.打开小程序->进入我的页面，若提示获取Cookie成功则可以使用该脚本
 3.关闭获取ck脚本，避免产生不必要的mitm。
 [Script]
-cron "0 10 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout=300, tag=🥤霸王茶姬小程序签到
-http-request ^https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-apiserver)\/crm\/points-info script-path=https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout=10, tag=霸王茶姬获取token 
+cron "0 10 * * *" script-path=https://raw.githubusercontent.com/zsrjim/heji/main/bwcj.js, timeout=300, tag=🥤霸王茶姬小程序签到
+http-request ^https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-apiserver)\/crm\/points-info script-path=https://raw.githubusercontent.com/zsrjim/heji/main/bwcj.js, timeout=10, tag=霸王茶姬获取token 
 [MITM]
 hostname =qmwebapi.qmai.cn,webapi.qmai.cn
 ------------------------------------------
