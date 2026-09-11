@@ -17,7 +17,7 @@ check(){
 }
 #3一键安装XUI
 xui(){
-	bash <(curl -Ls https://js.danshui.tk/proxy/https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
+	bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
 }
 #4一键安装Acme
 Acme (){
