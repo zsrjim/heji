@@ -9,11 +9,11 @@ update(){
 }
  #1一键DD debian11
 debian(){
-	curl -fLO https://js.danshui.tk/proxy/https://raw.githubusercontent.com/bohanyang/debi/master/debi.sh && chmod a+rx debi.sh && ./debi.sh --install 'curl wget neofetch htop net-tools git' --hostname liu --bbr --ustc --timezone Asia/Shanghai --cloud-kernel --user root --password xxxxxx && shutdown -r now
+	curl -fLO https://js.zsrzhu.eu.org/proxy/https://raw.githubusercontent.com/bohanyang/debi/master/debi.sh && chmod a+rx debi.sh && ./debi.sh --install 'curl wget neofetch htop net-tools git' --hostname liu --bbr --ustc --timezone Asia/Shanghai --cloud-kernel --user root --password xxxxxx && shutdown -r now
 }
 #2流媒体测试
 check(){
-	bash <(curl -L -s https://js.danshui.tk/proxy/https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)
+	bash <(curl -L -s https://js.zsrzhu.eu.org/proxy/https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)
 }
 #3一键安装XUI
 xui(){
@@ -41,19 +41,19 @@ docker(){
 }
 #7一键安装docker-compose
 docker-compose(){
-	curl -L "https://js.danshui.tk/proxy/https://github.com/docker/compose/releases/download/v2.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose && ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+	curl -L "https://js.zsrzhu.eu.org/proxy/https://github.com/docker/compose/releases/download/v2.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose && ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 }
 #8安装Tg专用代理（Go版）
 mtproxy(){
-	bash <(curl -s -L https://js.danshui.tk/proxy/https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy_go.sh)
+	bash <(curl -s -L https://js.zsrzhu.eu.org/proxy/https://raw.githubusercontent.com/shidahuilang/SS-SSR-TG-iptables-bt/main/sh/mtproxy_go.sh)
 }
 #9安装sing-box全家桶
 sing-box(){
-	bash <(wget -qO- https://js.danshui.tk/proxy/https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh)
+	bash <(wget -qO- https://js.zsrzhu.eu.org/proxy/https://raw.githubusercontent.com/fscarmen/sing-box/main/sing-box.sh)
 }
 #10一键添加虚拟交换分区（别乱用）
 swap(){
-	bash -c  "$(curl -fsSL https://js.danshui.tk/proxy/https://raw.githubusercontent.com/shidahuilang/pve/main/swap.sh)"
+	bash -c  "$(curl -fsSL https://js.zsrzhu.eu.org/proxy/https://raw.githubusercontent.com/shidahuilang/pve/main/swap.sh)"
 }
 echo && echo -e " 
   
